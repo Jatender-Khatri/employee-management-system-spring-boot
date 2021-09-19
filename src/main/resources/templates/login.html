@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<img class="wave" src="image/wave.png" id="wave3">
+		<div class="container" id="container3">
+			<div class="img" id="img3">
+				<img src="image/bg.svg">
+			</div>
+			<div class="login-content" id="login-content3">
+				<form th:action="@{/signin}" method="post">
+					<img src="image/avatar.svg">
+					<h2 class="title" id="title3">Welcome</h2>
+					
+					<div th:if="${param.logout}"
+						class="alert alert-success text-center">You Have been Logged
+						out</div>
+						<div th:if="${param.error}" class="alert alert-danger text-center">
+						Invalid User Name and Password</div>
+					<div th:if="${param.change}"
+						class="alert alert-success text-center">
+						<p th:text="${param.change}"></p>
+					</div>
+					<div class="input-div pass " id="input-div3">
+						<div class="i ">
+							<i class="fa fa-envelope " aria-hidden="true"></i>
+						</div>
+						<div class="div ">
+							<h5>Email</h5>
+							<input name="username" type="email" class="input" required>
+						</div>
+					</div>
+					<div class="input-div pass " id="input-div3">
+						<div class="i ">
+							<i class="fas fa-lock "></i>
+						</div>
+						<div class="div ">
+							<h5>Password</h5>
+							<input name="password" type="password" class="input " required>
+						</div>
+					</div>
+					<a id="a4" th:href=" @{/forgot_password}">Forgot Password?</a>
+
+					<button type="submit" class="btn4">Login</button>
+					<a id=a5 class="btn4" th:href="@{/signup}">Sign Up Account</a>
+					<!-- <button type="submit" class="btn4"><a id="a5" th:href="@{/signup}"></a>Sign Up Account</button> -->
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

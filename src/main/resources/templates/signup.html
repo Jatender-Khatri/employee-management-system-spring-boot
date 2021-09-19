@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body class="body3">
+	<section>
+		<img class="wave" src="image/wave.png" id="wave3">
+		<div class="container" id="container3">
+			<div class="img" id="img3">
+				<img src="image/bg.svg">
+			</div>
+			
+			<div class="login-content" id="login-content3">
+
+				<form th:action="@{/do_register}" method="post" th:object="${user}">
+					<img src="image/avatar.svg">
+					<h2 class="title" id="title3">Welcome</h2>
+					<div class="input-div one" id="input-div3">
+						<div class="i ">
+							<i class="fas fa-user "></i>
+						</div>
+						<div class="div ">
+							<h5>Username</h5>
+							<input name="username" type="text" class="input" required>
+						</div>
+					</div>
+					<div class="input-div pass" id="input-div3">
+						<div class="i">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</div>
+						<div class="div ">
+							<h5>Email</h5>
+							<input name="email" type="email" class="input " required>
+						</div>
+					</div>
+					<div class="input-div pass " id="input-div3">
+						<div class="i ">
+							<i class="fas fa-lock "></i>
+						</div>
+						<div class="div ">
+							<h5>Password</h5>
+							<input name="password" type="password" class="input " required>
+						</div>
+					</div>
+					<!-- term and condition agreement -->
+					<div class="form-group form-check r">
+						<input type="checkbox" name="agreement" class="form-check-input"
+							id="agreement" /> <label for="agreement">Accept terms
+							and condition</label>
+					</div>
+					<a id="a3" th:href="@{/signin}">Aleardy Ready Hava account?</a>
+
+					<button type="submit" class="btn3">Login</button>
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

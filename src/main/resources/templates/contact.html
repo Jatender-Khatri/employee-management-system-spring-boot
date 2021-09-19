@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container1">
+			<span class="big-circle"></span> <img src="image/shape.png"
+				class="square" alt="" />
+			<div class="form1">
+				<div class="contact-info">
+					<h3 class="title">Let's get in touch</h3>
+					<p class="text">Hi, Everyone!</p>
+					<p class="text" id="text1">If you hava any Question or query
+						Please send me through email, number or address. Solve your
+						problem quickly.</p>
+					<p class="text">Thankyou!</p>
+
+
+					<div class="info">
+						<div class="information">
+							<img src="image/location.png" class="icon" alt="" />
+							<p>Khatri Communication Umerkot</p>
+						</div>
+						<div class="information">
+							<img src="image/email.png" class="icon" alt="" />
+							<p>kumarjatender0@gmail.com</p>
+						</div>
+						<div class="information">
+							<img src="image/phone.png" class="icon" alt="" />
+							<p>+92 3351035477</p>
+						</div>
+					</div>
+
+					<div class="social-media">
+						<p>Connect with us :</p>
+						<div class="social-icons">
+							<a href="https://www.facebook.com/jatenderkhatr"> <i class="fab fa-facebook-f"></i>
+							</a> <a href="https://twitter.com/JatenderKumar0"> <i class="fab fa-twitter"></i>
+							</a> <a href="https://www.instagram.com/jatender48/"> <i class="fab fa-instagram"></i>
+							</a> <a href="https://www.linkedin.com/in/jatender-khatri/"> <i class="fab fa-linkedin-in"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="contact-form">
+					<span class="circle one"></span> <span class="circle two"></span>
+
+					<form action="index.html" autocomplete="off">
+						<h3 class="title">Contact us</h3>
+						<div class="input-container">
+							<input type="text" name="name" class="input" required /> <label
+								for="">Username</label> <span>Username</span>
+						</div>
+						<div class="input-container">
+							<input type="email" name="email" class="input" required /> <label
+								for="">Email</label> <span>Email</span>
+						</div>
+						<div class="input-container">
+							<input type="tel" name="phone" class="input" required /> <label
+								for="">Phone</label> <span>Phone</span>
+						</div>
+						<div class="input-container textarea">
+							<textarea name="message" class="input" required></textarea>
+							<label for="">Message</label> <span>Message</span>
+						</div>
+						<input type="submit" value="Send" class="btn" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
